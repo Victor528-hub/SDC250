@@ -1,0 +1,156 @@
+--Comment Question 1: Database Access
+-- USER_ID, USERNAME, CREATED and PASSWORD_CHANGE_DATE
+
+SELECT
+    USER_ID,
+    USERNAME,
+    CREATED,
+    PASSWORD_CHANGE_DATE
+FROM USER_USER;
+
+-- Question 2: Display everything in User_tables
+Select *
+From USER_TABLE;
+
+-- Question 3: Using Describe Command
+desc order;
+desc prodcutlist;
+desc reviews;
+desc storefront;
+desc userbase;
+desc userlibrary;
+
+-- Question 4: Display all data present in the database
+select *
+from orders;
+
+select *
+from prodcutlist;
+
+select *
+from reviews;
+
+select *
+from storefront;
+
+select *
+from userbase;
+
+select *
+from userlibrary;
+
+-- Question 5: Check Contraints present in database
+select
+    table_name,
+    constraint_name,
+    constraint_type,
+    status
+    from user_contraints;
+
+-- Question 6: checking views present in the database
+select 
+    view_name,
+    text
+    from user_view;
+
+-- Question 7: Displaying Username in alpabetical order
+select 
+    Username
+from userbase
+order by username;
+
+-- Question 8: Displaying Username in alpabetical order
+select
+    firstname,
+    lastname,
+    username,
+    password,
+    email
+from userbase
+where email = '@yahoo.com';
+
+-- Question 9: Funds less than $25
+select
+    username,
+    birthday,
+    walletfunds
+from userbase
+where walletfunds < 25;
+
+-- Question 10: Hours Played
+select
+    userid,
+    productcode
+from userlibrary
+where hoursplayed > 100;
+
+-- Question 11: Hours Played < 10
+select
+    userid,
+    productcode
+from userlibrary
+where hours played < 10;
+
+-- Question 12: Display Publisher 
+select publisher
+from Productlist;
+
+-- Question 13: Product displayed by genre
+Select 
+    productname,
+    releasedate,
+    publisher,
+    genre
+from productlist
+order by genre;
+
+-- Question 14: Products under strategy
+Select 
+    productcode,
+    publisher,
+    genre
+from productlist
+where genre = 'Strategy';
+
+-- Question 15: Product Price 25 or more descending
+select
+    productcode,
+    description,
+    price
+from storefront 
+where price > 25
+order by price desc;
+
+-- Question 16: InventoryID and price on storefront
+select
+    inventoryId,
+    price
+from storefront
+order by price;
+
+-- Question 17: Product and review 
+Select
+    ProductCode,
+    Review
+from reviews
+where rating = 1;
+
+-- Question 18: Product and review PT2
+Select 
+    ProductCode,
+    Review
+from reviews
+where rating = 4; 
+
+-- Question 19: Users whom placed orders
+select 
+    userid,
+    purchasedate
+from orders;
+
+-- Question 20: Users whom placed order by purchase date
+Select
+    Userid,
+    purchasedate
+from orders
+order by purchasedate: 

@@ -1,0 +1,8 @@
+-- 1 Eliminate the STOREFRONT table (Steve Albino)
+-- pt 1 Alter the Productlist table
+alter table productlist
+add (PRICE NUMBER(8,2),
+DESCRIPTION varchar2(250)
+);
+
+--- pt 2 series of statements to move the price and description 
